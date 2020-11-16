@@ -1,23 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
-
+import FunComp  from  './Components/Funcomp'
+import ClassComp  from  './Components/Classcomp'
+import Clock from './Components/Clock'
 function App() {
+	let array=[1,2,3,45,6]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+		<FunComp input={array} />
+		<Clock date={Date()} />
+    <ClassComp  text="заглушка клас комп" />
     </div>
   );
 }
